@@ -20,3 +20,12 @@ let lebar = 8;
 
 let keliling = 2 * (panjang + lebar);
 console.log("Keliling persegi panjang adalah : " +keliling);
+
+
+//  STUDY CASE 2
+
+let jariJari = 7;
+let phi = 3.14;
+
+let luasPermukaanTabung = 2 * (phi * jariJari *jariJari);
+console.log("Luas permukaan tabung adalah : " +luasPermukaanTabung);
