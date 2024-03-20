@@ -5,3 +5,4 @@ if(umur >= 17){
 }else{
     console.log("Belum bisa bikin KTP");
 }
+
