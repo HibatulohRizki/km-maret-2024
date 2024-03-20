@@ -38,3 +38,11 @@
      * Cek apakah bilangan prima
      */
 
+    
+    if(faktor===2) {
+        console.log("Bilangan Prima");
+    } else {
+        console.log("Bukan bilangan  Prima");
+    }
+
+
