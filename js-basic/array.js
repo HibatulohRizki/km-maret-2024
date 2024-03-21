@@ -13,3 +13,24 @@ for(let i = 0; i < murid.length ;i++){
         console.log(murid[i][0] + "."+murid[i][1] + ", IPK = "+murid[i][2]+ "Gagal");
     }
 }
+
+/**
+ * Study Case 2
+ * 
+ * Tentukan nilai rata-rata dari array berikut
+ * 
+ * var stats = [10,2,3,7,1,8,5];
+ * 
+ * result:
+ * 5.14
+ */
+
+let  stats = [10,2,3,7,1,8,5];
+let total =0;
+let mean ;
+for(let i = 0 ; i < stats.length ; i++ ) {
+    total += stats[i]
+}
+mean = total / stats.length;
+console.log("Mean :"+mean.toFixed(2));
+    
