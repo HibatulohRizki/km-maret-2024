@@ -34,3 +34,15 @@ for(let i = 0 ; i < stats.length ; i++ ) {
 mean = total / stats.length;
 console.log("Mean :"+mean.toFixed(2));
     
+
+/**
+ * Study case 3
+ * pecah sebuah kalimat menjadi per kata.
+ * var stats = "buka bersama teman kuliah seru"
+ * result:
+ * ["buka","bersama","teman","kuliah","seru"]
+ */
+
+let  sentence ="buka bersama teman kuliah seru";
+let words=sentence.split(' ');
+console.log(words);
