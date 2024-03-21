@@ -68,3 +68,22 @@
         }
         console.log(result+  "\n");
     }
+
+     /**
+     * Study case 5
+     * 
+     * Tampilkan bentuk segitiga sama siku-siku
+     * 
+     * 1
+     * 12
+     * 123
+     * 1234
+     * 12345
+     */
+     for(let i = 1 ; i <=5 ; i++){
+        let s ='';      //variabel penampung
+        for(let j = 1 ; j<=i;j++) {
+            s += j;
+        }
+        console.log(s);
+    }
