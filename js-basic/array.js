@@ -46,3 +46,30 @@ console.log("Mean :"+mean.toFixed(2));
 let  sentence ="buka bersama teman kuliah seru";
 let words=sentence.split(' ');
 console.log(words);
+
+/**
+ * Study case 4
+ */
+
+let votes = ["vincent", "admin", "ncent", "vincent", "ncent", "vincent"];
+let results = [];
+let countVincent = 0;
+let countAdmin = 0;
+let countNcent = 0;
+
+// mencari data terbanyak di array
+for (let i = 0; i < votes.length; i++) {
+    if (votes[i] === "vincent") {
+        countVincent++;
+    } else if (votes[i] === "admin"){
+        countAdmin++;
+    } else if (votes[i] === "ncent") {
+        countNcent++;
+    }
+}
+
+console.log(
+    ["Vincent", countVincent],
+    ["Admin", countAdmin],
+    ["Ncent", countNcent],
+);
