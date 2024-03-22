@@ -115,4 +115,31 @@ function average(stats) {
     return total / stats.length;
 }
 console.log(average([4,7,9,3,8])); // 
+
+/**
+ * Study case 7
+ * 
+ * buatlah function untuk mengecek apakah "x" sama dengan "o"
+ * 
+ * contoh :
+ * countXO ("xoxoxoxoxoo")
+ * outputnya : true
+ * */
     
+function countXO(str){
+    let xCount=0;
+    let oCount=0;
+    for (let i = 0; i < str.length; i++){
+       if (str[i]==='x'){
+           xCount++;
+       }else if (str[i]==='o'){
+           oCount++;
+       }
+   }
+   if ((xCount===oCount)&&(xCount%2===0)) {
+       return true;
+   } else {
+       return false;
+       }
+}
+console.log(countXO("xoxoxoxoxxoo")); // true
