@@ -98,4 +98,21 @@ function splitSentence(sentence) {
     console.log(hasil);
 }
 splitSentence("Buka puasa bersama teman kuliah");
+
+/**
+ * Study case 6
+ * 
+ * buatlah function untuk menghitung sebuah average
+ * 
+ * contoh  : [4,7,9,3,8] -> 5.2
+ */
+
+function average(stats) {
+    let total = 0;
+    for(let i = 0; i < stats.length; i++) {
+        total += stats[i];
+    }
+    return total / stats.length;
+}
+console.log(average([4,7,9,3,8])); // 
     
