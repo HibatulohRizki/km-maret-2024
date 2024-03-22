@@ -55,5 +55,47 @@ function checkFaktor(number) {
 console.log(checkFaktor(12));
 
 
+/**
+ * Study case 4
+ * buatlah sebuah fungsi apakah bilangan prima atau bukan
+ * 
+ * contoh : cekBilanganPrima(19);
+ * 
+ * output : Bilangan prima
+ */
+function isPrimeNumber(angka) {
+    let jumlahFaktor = checkFaktor(angka)
+    if(jumlahFaktor === 2){
+        return  'Bilangan Prima';
+    }  else{
+        return  'Bukan Bilangan Prima';
+    }
+}
+
+console.log(isPrimeNumber(19)); //output
 
 
+/**
+ * Study case 5
+ * 
+ * buatlah sebuah function untuk memecah sebuah kata menjadi per kalimat
+ * 
+ * contoh : "Buka puasa bersama teman kuliah " -> 
+ * ["Buka","puasa","bersama","teman","kuliah"]
+ */
+
+function splitSentence(sentence) {
+    let hasil = [];
+    let word = "";
+    for(let i = 0; i <= sentence.length; i++){
+        if (i == sentence.length || sentence[i] == " ") {
+            hasil.push(word);
+            word = "";
+        }else {
+            word += sentence[i];
+        }
+    }
+    console.log(hasil);
+}
+splitSentence("Buka puasa bersama teman kuliah");
+    
