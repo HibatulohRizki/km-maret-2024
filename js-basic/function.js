@@ -34,4 +34,26 @@ function countElementInArray(kalimat){
 let exampleSentence = "Halo Selamat Pagi";
 console.log(countElementInArray(exampleSentence));
 
+/**
+ * Study case 3
+ * 
+ * buatlah function untuk mengecek sebuah faktor dari angka
+ * contoh :
+ * CheckBilangan(12); 
+ * result : 6
+ */
+
+function checkFaktor(number) {
+    let faktor = 0;
+    for(let i= 1 ; i <= number ; i++){
+        if (number % i == 0) {
+            faktor++;
+        }
+    }
+    return faktor;
+}
+console.log(checkFaktor(12));
+
+
+
 
