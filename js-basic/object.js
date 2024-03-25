@@ -34,4 +34,44 @@ let  person={
     },
 };
 person.jihyoHobb();
+
+/**
+ * Tentukan jumlah huruf vokal dalam suatu kalimat
+ * 
+ * contoh : "Buka puasa bersama teman kuliah"
+ * 
+ * {
+ *  a:7
+ *  i:1
+ *  u:3
+ *  e:2
+ *  o:0
+ * }
+ */
+
+function countVokal(kalimat){
+    let results = {
+        a: 0,
+        i: 0,
+        u: 0,
+        e: 0,
+        o: 0,
+    }
+
+    for(let i = 0; i < kalimat.length; i++){
+        if(kalimat[i] == "a" || kalimat[i] === "A"){
+            results.a++;
+        }else if(kalimat[i] === "i" || kalimat[i] === "I"){
+            results.i++;
+        }else if(kalimat[i] === "u" || kalimat[i] === "U"){
+            results.u++;
+        }else if(kalimat[i] === "e" || kalimat[i] === "E"){
+            results.e++;
+        }else if( kalimat[i] === "o" || kalimat[i] === "O"){
+            results.o++;
+        }
+    }
+    return results;
+}
+console.log(countVokal("Buka puasa bersama teman kuliah")); 
     
