@@ -74,4 +74,34 @@ function countVokal(kalimat){
     return results;
 }
 console.log(countVokal("Buka puasa bersama teman kuliah")); 
-    
+
+
+/**
+ * menghitung votes
+ * 
+ * contoh :
+ * let votes = ["Rizki","Rizki","Admin"]
+ * 
+ * hasil : {
+ * rizki : 2,
+ * admin :1
+ * }
+ * pemenangnya adalah rizki
+ */
+
+function quickCount(vote) {
+    let hasil = {
+        jihyo:0,
+        ansel :0,
+    };
+    for( let i = 0; i <  vote.length ; i++ ) {
+        if (vote[i].toLowerCase() === "jihyo"){
+            hasil.jihyo++;
+        } else if(vote[i].toLowerCase() === "ansel"){
+            hasil.ansel++;
+        } 
+    }
+    return hasil;
+}
+
+console.log(quickCount(["jihyo","jihyo","ansel"]));
