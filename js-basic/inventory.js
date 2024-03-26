@@ -30,7 +30,7 @@ let carts = [
 const showCarts = () =>{
     console.log("Carts list : ");
     carts.forEach((cart) => {
-        const {id,name,type,price,status,stock}
+        const {id,name,type,price,status,stock} = cart;
         if(status === true){
             console.log(`${id}. [x] ${name} - Rp.${price}.`);
             console.log(`${type}. Stocks : ${stock} pcs.`);
@@ -81,5 +81,5 @@ const updateCart = (id,name,type,price,status,stock)=>{
 }
 
 // addItem("Keyboard Gaming","keyboard",200000,5);
-// showCarts();
+showCarts();
 getCartById();
