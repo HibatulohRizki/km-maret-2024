@@ -51,6 +51,10 @@ class Office {
                 break;
         }
     }
+
+    removeStaff(name){
+        this.rooms = this.rooms.filter(room => room.name !== name)
+    }
 }
 
 const office = new Office()
@@ -59,4 +63,6 @@ office.addStaff("Joe","Developer", true, "Tangsel", ["PHP"]);
 office.addStaff("Anna","Designer", false, "Bandung", []);
 
 // console.log(office);
+
+office.removeStaff("Joe");
 office.showStaffs();
