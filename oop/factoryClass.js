@@ -34,7 +34,11 @@ class Office {
     }
 
     showStaffs(){
-
+        console.log("Staff List : ");
+        this.rooms.forEach((room, index) => {
+            const {name, job} = room;
+            console.log(`${index + 1}. ${name} - ${job}`);
+        })
     }
 
     addStaff(name, job, isGraduated, city, skills){
@@ -54,4 +58,5 @@ const office = new Office()
 office.addStaff("Joe","Developer", true, "Tangsel", ["PHP"]);
 office.addStaff("Anna","Designer", false, "Bandung", []);
 
-console.log(office);
+// console.log(office);
+office.showStaffs();
