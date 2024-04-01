@@ -72,6 +72,27 @@ class Kitchen{
     }
     bake(name, price, type){
         //menambahkan cookies
+        let ingredients = []
+        let isSweet = false;
+
+        if(this.container.length === 0) id -1;
+        switch(type){
+            case "Chocolate" :
+                this.container.push(
+                    new Chocolate(id, name, price,  ingredients, type, isSweet)
+                );
+                break;
+            case "Sweet" :
+                this.container.push(
+                    new Sweet(id, name, price,  ingredients, type, isSweet)
+                );
+                break;
+            case "Strawberry" :
+                this.container.push(
+                    new Strawberry(id, name, price,  ingredients, type, isSweet)
+                );
+                break;
+        }
     }
     eat(id){
         // menghapus cookies
