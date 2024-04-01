@@ -29,4 +29,4 @@ class Strawberry extends Cookies{
     }
 }
 
-module.exports={ Chocolate, Sweet, Strawberry};
+module.exports = { Chocolate, Sweet, Strawberry};

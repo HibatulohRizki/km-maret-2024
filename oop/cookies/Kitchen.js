@@ -1,20 +1,20 @@
 const {Chocolate, Sweet, Strawberry} = require('./Cookie');
 
 class Kitchen{
-    constructor(container){
-        this.container = container;
+    constructor(containers){
+        this.containers = containers;
     }
 
     showCookies(){
         // menampilkan cookies
         console.log("Cookies in Container: ");
-        if(this.container.length > 0){
-          this.container.forEach(container => {
+        if(this.containers.length > 0){
+          this.containers.forEach((container) => {
             const{id, name,price, isSweet} = container;
             if(isSweet){
-                console.log(`ID : ${id}, Name : ${name}, Price : Rp.${price}`);  
+                console.log(`${id}.[X]${name} - Rp.${price}`);  
             }else{
-                console.log(`ID : ${id}-${"Not Sweet"}, Name : ${name}-${"Not Sweet"}, Price : RP.${price}`);  
+                console.log(`${id}.[] ${name} - RP.${price}`);  
             } 
             });  
         }else {
@@ -27,38 +27,39 @@ class Kitchen{
         let ingredients = []
         let isSweet = false;
         let id ;
-        if(this.container.length === 0)id = 1;
+        if(this.containers.length === 0)id = 1;
+
         switch(type){
-            case "Chocolate" :
-                this.container.push(
-                    new Chocolate(id, name, price,  ingredients, type, isSweet)
+            case "Chocolate":
+                this.containers.push(
+                    new Chocolate(id, name, price, ingredients, type, isSweet)
                 );
                 break;
-            case "Sweet" :
-                this.container.push(
-                    new Sweet(id, name, price,  ingredients, type, isSweet)
+            case "Sweet":
+                this.containers.push(
+                    new Sweet(id, name, price, ingredients, type, isSweet)
                 );
                 break;
-            case "Strawberry" :
-                this.container.push(
-                    new Strawberry(id, name, price,  ingredients, type, isSweet)
+            case "Strawberry":
+                this.containers.push(
+                    new Strawberry(id, name, price, ingredients, type, isSweet)
                 );
                 break;
         }
     }
     eat(id){
         // menghapus cookies
-        this.container= this.container.filter(
+        this.containers = this.containers.filter(
             (container) => container.id !== id);
     }
     addSugar(id){
         // mengubah cookies
-        this.container = this.container.map((container) => {
+        this.containers = this.containers.map((container) => {
             if(container.id === id){
                 container.isSweet = true;
             }
-        })
+        });
     }
 }
 
-module.exports = {Kitchen};
+module.exports = { Kitchen };
