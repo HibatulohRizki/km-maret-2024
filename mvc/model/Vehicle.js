@@ -18,10 +18,10 @@ class Vehicle{
         return vehicles;
     }
 
-    static add(params){
+    static add(vehicle){
         let vehicles = this.getVehicle();
         let id = vehicles[vehicles.length -1].id + 1; 
-        const [name, brand, price, type] = params;
+        const [name, brand, price, type] = vehicle;
 
         vehicles.push(
             new Vehicle(id, name, brand, Number(price), type)
