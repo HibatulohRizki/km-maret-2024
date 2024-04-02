@@ -1,22 +1,23 @@
 const Vehicle = require('../model/Vehicle');
-const View = require('../view.js/View');
+const View = require('../view/View');
 
-class VehicleCotroller {
+class VehicleController {
     static show(){
-        Vehicle.show();
+        let vehicles = Vehicle.getVehicle();
+        View.show(vehicles);
     }
-    static add(){
-        Vehicle.add();
+    static add(params){
+        Vehicle.add(params);
     }
-    static delete(){
-        Vehicle.delete();
+    static delete(params){
+        Vehicle.delete(params);
     }
-    static update(){
-       Vehicle.update();
+    static update(params){
+       Vehicle.update(params);
     }
     static message(msg){
         View.message(msg);
     }
 }
 
-module.exports = VehicleCotroller; 
+module.exports = VehicleController; 
