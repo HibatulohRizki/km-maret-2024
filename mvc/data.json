@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name" : "Supra",
+        "brand": "Toyota",
+        "Price": 10000,
+        "type" : "Sport"
+    },
+    {
+        "id": 2,
+        "name" : "Karimun",
+        "brand": "Suzuki",
+        "Price": 1000,
+        "type" : "sedan"
+    },
+    {
+        "id": 1,
+        "name" : "Ford",
+        "brand": "Ford",
+        "Price": 1500,
+        "type" : "Pickup"
+    }
+]
