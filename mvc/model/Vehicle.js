@@ -34,6 +34,24 @@ class Vehicle{
         vehicles = vehicles.filter(vehicle => vehicle.id !== id);
         this.save(vehicles);
     }
+    static update(vehicle){
+        let vehicles = this.getVehicle();
+        let id = Number(vehicle[0]);
+        let name = vehicle[1];
+        let brand= vehicle[2]
+        let price= vehicle[3]
+        let type = vehicle[4]
+        vehicles = vehicles.map(vehicle => {
+            if(vehicle.id === id ){
+                vehicle.name = name;
+                vehicle.brand = brand;
+                vehicle.price = price;
+                vehicle.type = type;
+            }
+            return vehicle;
+        })
+        this.save(vehicles);
+    }
     static save(vehicles){
         let vehicleString = JSON.stringify(vehicles,null,3)
         fs.writeFileSync("./data.json",vehicleString);

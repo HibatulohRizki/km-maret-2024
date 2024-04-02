@@ -15,10 +15,10 @@
    },
    {
       "id": 3,
-      "name": "Ford",
-      "brand": "Ford",
-      "price": 800000,
-      "type": "SUV"
+      "name": "Carry",
+      "brand": "suzuki",
+      "price": "200000",
+      "type": "pickup"
    },
    {
       "id": 5,
